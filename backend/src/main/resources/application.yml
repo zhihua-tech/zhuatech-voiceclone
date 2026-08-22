@@ -1,0 +1,13 @@
+# Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/
+spring:
+  application:
+    name: zhuatech-voiceclone
+server:
+  port: ${SERVER_PORT:8080}
+zhuatech:
+  audio:
+    provider: ${ZHUATECH_AUDIO_PROVIDER:local}
+    base-url: ${ZHUATECH_AUDIO_BASE_URL:}
+    model: ${ZHUATECH_AUDIO_MODEL:voice-clone-provider-model}
+    api-key: ${ZHUATECH_AUDIO_API_KEY:}
+

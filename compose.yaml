@@ -1,0 +1,15 @@
+# Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/
+services:
+  api:
+    build: ./backend
+    environment:
+      ZHUATECH_AUDIO_PROVIDER: ${ZHUATECH_AUDIO_PROVIDER:-local}
+      ZHUATECH_AUDIO_BASE_URL: ${ZHUATECH_AUDIO_BASE_URL:-}
+      ZHUATECH_AUDIO_MODEL: ${ZHUATECH_AUDIO_MODEL:-voice-clone-provider-model}
+      ZHUATECH_AUDIO_API_KEY: ${ZHUATECH_AUDIO_API_KEY:-}
+    ports: ["8080:8080"]
+  web:
+    image: nginx:1.27-alpine
+    volumes: ["./frontend:/usr/share/nginx/html:ro"]
+    ports: ["8088:80"]
+
