@@ -7,8 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class VoiceCloneService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result analyze(Request request) {
         int score = 100;
         List<Check> checks = new ArrayList<>();
@@ -28,12 +34,21 @@ public class VoiceCloneService {
             "LOCAL_QUALITY_GATE");
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@AssertTrue(message = "必须确认已获得声音权利人授权") boolean authorized,
                           @Min(3) @Max(600) int sampleSeconds,
                           @DecimalMin("-90") @DecimalMax("0") double noiseDb,
                           @NotBlank String language,
                           @NotBlank @Size(max = 2000) String targetText) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Check(String name, String status, String message) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String status, int readinessScore, List<Check> checks, List<String> pipeline,
                          Map<String, Object> providerPayload, String executionMode) {}
 }
