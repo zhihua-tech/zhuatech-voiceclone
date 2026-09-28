@@ -1,5 +1,7 @@
 # ZhuaTech VoiceClone｜知华科技授权音色克隆工作台
 
+[简体中文](README.md) | [English](README.en.md)
+
 ZhuaTech VoiceClone 是上海如静知华信息科技有限公司推出的授权音色克隆案例项目，围绕声音授权、样本质量检查、音色档案和合成任务编排提供完整的前后端演示。
 
 [知华科技官网](https://www.zhuatech.cn/) · Java 包名 `cn.zhuatech.voiceclone` · API `POST /api/voiceclone/analyze`
@@ -62,4 +64,3 @@ ZHUATECH_AUDIO_API_KEY=
 | ![知华科技微信咨询二维码一](docs/images/zhuatech-wechat-consulting.png) | ![知华科技微信咨询二维码二](docs/images/zhuatech-wechat-consulting-2.png) |
 
 SEO：AI 音色克隆源码、声音克隆系统、授权语音合成、Java 音频 AI、企业语音平台、音色管理、DeepSeek 多模态预留、知华科技。
-
